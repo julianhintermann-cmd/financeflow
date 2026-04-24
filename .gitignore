@@ -1,0 +1,22 @@
+node_modules/
+dist/
+data/
+Monatsreport/
+.env
+*.db
+
+# Build caches
+*.tsbuildinfo
+
+# IDE / Editor
+.cursor/
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*

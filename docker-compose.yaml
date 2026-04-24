@@ -1,0 +1,17 @@
+services:
+  finance-app:
+    build: .
+    # To pull from Docker Hub instead of building locally:
+    # image: YOUR_DOCKERHUB_USERNAME/financeflow:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - /volume1/data/financeflow:/app/data
+      - /volume1/data/financeflow/Monatsreport:/app/data/Monatsreport
+      - /volume1/data/financeflow/uploads:/app/data/uploads
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+      - DATA_DIR=/app/data
+    restart: unless-stopped
